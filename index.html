@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Menu</title>
+        <link rel="stylesheet" href="css/indexStyle.css">      
+    </head>
+    <body>
+    
+        <form id="formulario"> 
+            <div class="doc">
+                <label for="login">Documento:</label>
+                <input type="text" id="login" name="login"  placeholder="Digite o CPF ou RG" required>
+
+            </div>
+            <nav class="nav_links">
+                <ul>                     
+                    <li>
+                        <input type="submit" form="formulario" id="buscar" value="Buscar">
+                    </li>                    
+                </ul>
+            </nav>
+        </form>
+
+        <nav class="nav_tabs">
+            <ul>
+                <li>
+                    <input type="radio" name="tab" class="tabs" id="cliente"
+                    checked>
+                    <label for="cliente" class="cursor">Cliente</label>
+
+                    <div class="content">
+                        <form id="formCliente">
+                                <label for="nome">Nome completo:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite o nome*" required>
+    
+                                <div class="field">
+                                    <label for="emal">Email:</label>
+                                    <input type="text" id="email" name="email" placeholder="Digite o email*" required>
+                                </div>
+                                <div class="field">
+                                    <label for="documento">Documento:</label>
+                                    <input type="text" id="documento" name="documento" placeholder="Digite o CPF ou RG" required>
+                                </div>
+                    
+                                <div class="field">
+                                     <label for="nascimento">Data de nascimento:</label>
+                                     <input type="date" id="nascimento" name="nascimento"  placeholder="Digite a data de nascimento">
+                                </div>
+                    
+                                   <div class="field">
+                                    <label for="cidade">Cidade:</label>
+                                    <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+                                </div>
+                    
+                                <div class="field">
+                                    <label for="estado">Estado:</label>
+                                    <input type="text" id="estado" name="estado" placeholder="Digite o estado" required>
+                                </div>
+                                <input type="submit" id="clienteSB" name="clientes" value="Salvar">
+                            </form>
+                        </div>
+
+                </li>
+
+                <li>
+                    <input type="radio" name="tab" class="tabs" id="reserva">
+                    <label for="reserva" class="cursor">Reserva</label>
+
+                    <div class="content">
+                        <div>
+                            
+                            <form id="formReservas">
+
+                                <div class="field">
+                                    <label for="id_quarto">Número do Quarto:</label>
+                                    <label id="id_quarto"></label>
+                                   
+                                     </select>
+                                </div>
+                                <div class="field">
+                                    <label for="id_cliente">Nome do Cliente:</label>
+                                    <input type="text" id="id_cliente" name="id_cliente" placeholder="Digite o nome*" required>
+                                    
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="dataEntrada">Data de Entrada:</label>
+                                    <input type="date" id="dataEntrada" name="dataEntrada" placeholder="Digite a data de entrada*" required>
+                                </div>
+                                <div class="field">
+                                    <label for="dataSaida">Data de Saída:</label>
+                                    <input type="date" id="dataSaida" name="dataSaida"  placeholder="Digite a data de saida*" required>
+                                </div>
+                                <div class="field">
+                                    <label for="valor">Valor da reserva:</label>
+                                    <label id="valorReserva"></label>
+                                </div>
+                                
+                                <input type="submit" id="reservaSB" name="reservas" value="Salvar">
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>          
+        </nav>
+        <div id="resposta"></div>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="ajaxCliente.js" type="text/javascript"></script>
+        <script src="ajaxReserva.js" type="text/javascript"></script>
+        <script src="ajaxUpdateCliente.js" type="text/javascript"></script>
+        <script src="ajaxUpdateReserva.js" type="text/javascript"></script>
+
+    </body>
+</html>
+
